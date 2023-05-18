@@ -1,0 +1,16 @@
+create_table = '''CREATE TABLE IF NOT EXISTS shipping_data(
+    RECORD_ID varchar(20),
+    RX_NUMBER varchar(35),
+    SHIPPING_ADDRESS_1 varchar(25),
+    SHIPPING_ADDRESS_2 varchar(26),
+    SHIPPING_CITY char(20),
+    SHIPPING_STATE char(21),
+    SHIPPING_ZIP_CODE varchar(22),
+    SHIPPING_CARRIER char(19),
+    SHIPPING_TRACKING_NUMBER varchar(40),
+    SHIPPING_TYPES varchar(29))'''
+
+insert_data = '''INSERT INTO shipping_data (RECORD_ID, RX_NUMBER, SHIPPING_ADDRESS_1, SHIPPING_ADDRESS_2, SHIPPING_CITY, SHIPPING_STATE, SHIPPING_ZIP_CODE, SHIPPING_CARRIER, SHIPPING_TRACKING_NUMBER, SHIPPING_TYPES)
+ VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''  
+
+truncate_table = '''TRUNCATE TABLE shipping_data RESTART IDENTITY CASCADE;'''
