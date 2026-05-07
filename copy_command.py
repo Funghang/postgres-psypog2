@@ -1,4 +1,4 @@
-#using subprocess.run()
+#using subprocess
 import csv
 from decimal import InvalidOperation
 import subprocess
