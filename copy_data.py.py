@@ -1,4 +1,4 @@
-#program to copy data from .txt to postgres using laytout_id, files table  where the file path of processed_demographics.txt is given
+#program to copy data from .txt to postgres using laytout_id, files table  
 
 import psycopg2
 import os
@@ -38,7 +38,7 @@ def retrieve_files(conn, file_path):
     # Create the table based on the layout ID and header names
     create_table_query = f"CREATE TABLE IF NOT EXISTS layout_{layout_id} ("
 
-    # Generate column definitions with data types
+    # Generate column definitions 
     column_definitions = []
     for column in columns:
         column_name, data_type = column
